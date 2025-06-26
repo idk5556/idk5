@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="869.0" prefWidth="1432.0"
+            xmlns="http://javafx.com/javafx/23.0.1"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.example.facebook.HomePage">
+
+   <children>
+      <ImageView fitHeight="45.0" fitWidth="45.0" layoutX="10.0" layoutY="10.0">
+         <image>
+            <Image url="@../../../Facebook_f_logo_(2021).svg.png" />
+         </image>
+      </ImageView>
+
+      <TextField fx:id="search" layoutX="67.0" layoutY="16.0"
+                 prefHeight="33.0" prefWidth="248.0"
+                 promptText="search on Facebook">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </TextField>
+
+      <Label fx:id="friends" layoutX="33.0" layoutY="235.0"
+             prefHeight="34.0" prefWidth="115.0"
+             text="👥 Friends">
+         <font>
+            <Font name="System Bold" size="23.0" />
+         </font>
+      </Label>
+
+      <HBox fx:id="hBox" layoutX="33.0" layoutY="148.0"
+            prefHeight="51.0" prefWidth="312.0" />
+
+      <ImageView fx:id="profilePictureIcon" fitHeight="40.0" fitWidth="40.0"
+                 layoutX="1282.0" layoutY="24.0">
+         <image>
+            <Image url="@../../../black_user_profile_picture.png" />
+         </image>
+      </ImageView>
+
+      <ImageView fx:id="notificationBell" fitHeight="40.0" fitWidth="40.0"
+                 layoutX="1221.0" layoutY="24.0" pickOnBounds="true">
+         <image>
+            <Image url="@../../../facebook_black_notification_button.png" />
+         </image>
+      </ImageView>
+
+      <ImageView fx:id="messanger" fitHeight="40.0" fitWidth="40.0"
+                 layoutX="1160.0" layoutY="24.0">
+         <image>
+            <Image url="@../../../facebook_black_messanger_button.png" />
+         </image>
+      </ImageView>
+
+      <Button fx:id="shareThoughtsButton" layoutX="505.0" layoutY="25.0"
+              mnemonicParsing="false" prefHeight="61.0" prefWidth="422.0"
+              text="would you mind sharing your thoughts with us?" textFill="#000000b1">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Button>
+      <ScrollPane fx:id="postsScrollpane"
+                  layoutX="395.0" layoutY="146.0"
+                  prefHeight="644.0" prefWidth="643.0"
+                  fitToWidth="true"
+                  pannable="true"
+                  vbarPolicy="ALWAYS"
+                  hbarPolicy="NEVER">
+
+         <content>
+            <VBox fx:id="postsVbox"
+                  spacing="5"
+                  prefWidth="643.0"
+                  fillWidth="true" />
+         </content>
+      </ScrollPane>
+
+   </children>
+</AnchorPane>
